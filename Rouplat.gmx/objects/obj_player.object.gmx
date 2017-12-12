@@ -33,12 +33,9 @@ player_spd = 4;
 facing = 0; // 0 == left and 1 == right
 firing_delay = 10; 
 
-
-
 //Jumping
 jump_total = 1;
 can_jump = true;
-
 </string>
           </argument>
         </arguments>
@@ -110,30 +107,31 @@ if (vspd &lt; 0) &amp;&amp; (!key_jump_held) vspd = max(vspd,-player_spd/4);
 //(Create Scale Jumping Also with the wall jumping)
 if (place_meeting(x+hspd,y,obj_wall_parent)) 
 {
-//if (key_right) || (key_left)
-//{
+if (key_right) || (key_left)
+{
 vspd = 2;
-//}
+}
 }
 //Wall Jumping 
 if (place_meeting(x+hspd,y,obj_wall_parent) &amp;&amp; (key_jump)){
     can_jump = false;
-    //if(key_right){
+    vspd = 0
+    if(key_right){
         x += -20;
         if (place_meeting(x+15+hspd,y-15,obj_wall_parent)) {
             vspd = - 20; 
         } else {
             vspd = - 5;
         }
-    //}
-    //else if (key_left){
+    }
+    else if (key_left){
         x += 20;
         if (place_meeting(x-15+hspd,y-15,obj_wall_parent)) {
             vspd = - 20;  
         } else {
             vspd = - 5;
         }
-    //}
+    }
 }else can_jump = true; 
 
 // Horz Collision
