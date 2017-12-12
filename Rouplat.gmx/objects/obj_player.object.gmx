@@ -60,7 +60,7 @@ can_jump = true;
             <kind>1</kind>
             <string>/// Player controls and collisions 
 // Debugging Zone VVV
-show_debug_message(vspd); 
+show_debug_message(facing); 
 // Debugging Zone ^^^
 
 
@@ -113,33 +113,22 @@ vspd = 2;
 }
 }
 //Wall Jumping 
-if (place_meeting(x+hspd,y,obj_wall_parent) &amp;&amp; (key_jump))
-{
+if (place_meeting(x+hspd,y,obj_wall_parent) &amp;&amp; (key_jump)){
     can_jump = false;
-<<<<<<< HEAD
-    if(key_right){
-        x += -30;
-=======
-    vspd = 0
     if(key_right){
         x += -20;
->>>>>>> 1d33fd442f704135c40b5ce68fadcafc92fd2810
         if (place_meeting(x+15+hspd,y-15,obj_wall_parent)) {
-            vspd = -20; 
+            vspd = - 20; 
         } else {
             vspd = - 5;
         }
     }
     else if (key_left){
-<<<<<<< HEAD
-        x += 30;
-=======
         x += 20;
->>>>>>> 1d33fd442f704135c40b5ce68fadcafc92fd2810
         if (place_meeting(x-15+hspd,y-15,obj_wall_parent)) {
-            vspd = -20; 
-            } else {
-            vspd = -5;
+            vspd = - 20;  
+        } else {
+            vspd = - 5;
         }
     }
 }else can_jump = true; 
