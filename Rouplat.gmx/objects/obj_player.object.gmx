@@ -26,12 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize the player variables 
-grav = 0.8;
+grav = 0.4;
 hspd = 0;
 vspd = 0;
-player_spd = 8;
+player_spd = 4;
 facing = 0; // 0 == left and 1 == right
-firing_delay = 5; 
+firing_delay = 10; 
 
 
 
@@ -63,7 +63,7 @@ can_jump = true;
             <kind>1</kind>
             <string>/// Player controls and collisions 
 // Debugging Zone VVV
-show_debug_message(vspd); 
+show_debug_message(facing); 
 // Debugging Zone ^^^
 
 
