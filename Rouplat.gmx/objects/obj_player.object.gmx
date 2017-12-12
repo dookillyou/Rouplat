@@ -33,12 +33,9 @@ player_spd = 4;
 facing = 0; // 0 == left and 1 == right
 firing_delay = 10; 
 
-
-
 //Jumping
 jump_total = 1;
 can_jump = true;
-
 </string>
           </argument>
         </arguments>
@@ -119,8 +116,14 @@ vspd = 2;
 if (place_meeting(x+hspd,y,obj_wall_parent) &amp;&amp; (key_jump))
 {
     can_jump = false;
+<<<<<<< HEAD
     if(key_right){
         x += -30;
+=======
+    vspd = 0
+    if(key_right){
+        x += -20;
+>>>>>>> 1d33fd442f704135c40b5ce68fadcafc92fd2810
         if (place_meeting(x+15+hspd,y-15,obj_wall_parent)) {
             vspd = -20; 
         } else {
@@ -128,7 +131,11 @@ if (place_meeting(x+hspd,y,obj_wall_parent) &amp;&amp; (key_jump))
         }
     }
     else if (key_left){
+<<<<<<< HEAD
         x += 30;
+=======
+        x += 20;
+>>>>>>> 1d33fd442f704135c40b5ce68fadcafc92fd2810
         if (place_meeting(x-15+hspd,y-15,obj_wall_parent)) {
             vspd = -20; 
             } else {
