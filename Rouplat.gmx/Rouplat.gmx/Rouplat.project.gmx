@@ -7,8 +7,10 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_gold</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -25,6 +27,9 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_wall_parent</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_enemy</object>
+    <object>objects\obj_gold</object>
+    <object>objects\par_enemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
