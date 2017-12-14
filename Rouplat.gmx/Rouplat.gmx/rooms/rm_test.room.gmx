@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>8404992</colour>
   <showcolour>-1</showcolour>
-  <code>enum states
+  <code>enum player_state
 {
     normal,
     wall_jump,

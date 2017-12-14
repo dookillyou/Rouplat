@@ -17,4 +17,4 @@ if(key_right)
         } 
     }else can_jump = false
 
-states = states.normal; 
+state = player_state.normal; 

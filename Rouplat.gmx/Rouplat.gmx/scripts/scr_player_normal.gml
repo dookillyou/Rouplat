@@ -43,7 +43,7 @@ if (place_meeting(x+hspd,y,obj_wall_parent) && (key_jump))
 {
     vspd = 0;
     hspd = 0;
-    states = states.wall_jump;
+    state = player_state.wall_jump;
 }
 
 //Collisions
