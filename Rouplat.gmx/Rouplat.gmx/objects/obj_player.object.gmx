@@ -111,7 +111,7 @@ switch(state)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Restart
+            <string>///Restart
 game_restart();
 </string>
           </argument>
@@ -135,7 +135,7 @@ game_restart();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//debugging
+            <string>///debugging
 draw_text(obj_player.x -10,obj_player.y - 40,string(state));
 draw_self();
 </string>

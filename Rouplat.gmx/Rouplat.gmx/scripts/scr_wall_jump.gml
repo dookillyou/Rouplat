@@ -8,8 +8,7 @@ if(key_right)
         } 
     }
     else if (key_left)
-    {
-       
+    {      
         if (place_meeting(x-1,y,obj_wall_parent)) 
         {   
             can_jump = true

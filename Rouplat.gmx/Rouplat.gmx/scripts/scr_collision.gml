@@ -15,13 +15,18 @@ x += hspd;
 // Vert Collisions
 if (place_meeting(x,y+vspd,obj_wall_parent))
 {
- can_jump = true;
- while(!place_meeting(x,y+sign(vspd),obj_wall_parent))
-{
-y += sign(vspd);
-}
+    can_jump = true;
+    while(!place_meeting(x,y+sign(vspd),obj_wall_parent))
+    {
+        y += sign(vspd);
+    }
  
-vspd = 0  
+    vspd = 0  
+}
+
+if (place_meeting(x,y-vspd,obj_wall_parent))
+{
+    can_jump = false;
 }
 
 y += vspd; 
