@@ -31,20 +31,24 @@ firing_delay = 5
     }
 }
 
-//Wall Sliding
-/*if (place_meeting(x+hspd,y,obj_wall_parent)) 
-    {
-        if (key_right) || (key_left)
-        {
-        states = states.wall_slide
-        }
-    }*/
+//Wall jumping
 if (place_meeting(x+hspd,y,obj_wall_parent) && (key_jump))
 {
     vspd = 0;
     hspd = 0;
     state = player_state.wall_jump;
-}
+}    
+
+
+//Wall Sliding
+if (place_meeting(x+sign(hspd),y,obj_wall_parent) && !place_meeting(x,y-2,obj_wall_parent) && !(key_jump))
+    {
+        if (key_right) || (key_left)
+        {
+        state = player_state.wall_slide
+        }
+    }
+
 
 //Collisions
 scr_collision();
