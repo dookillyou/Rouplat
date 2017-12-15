@@ -46,5 +46,9 @@ if (place_meeting(x+hspd,y,obj_wall_parent) && (key_jump))
     state = player_state.wall_jump;
 }
 
+if (!place_meeting(x,y-1,obj_wall_parent) && (key_left || key_right))
+{
+    state = player_state.wall_slide;
+}
 //Collisions
 scr_collision();
