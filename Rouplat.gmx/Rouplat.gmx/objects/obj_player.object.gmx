@@ -34,7 +34,7 @@ jump_speed = 10;
 facing = 0; // 0 == left and 1 == right
 firing_delay = 10; 
 state = player_state.normal;
-
+_slide = true; 
 
 
 //Jumping
@@ -65,7 +65,7 @@ can_jump = true;
             <kind>1</kind>
             <string>/// Player controls and collisions 
 // Debugging Zone VVV
-show_debug_message(can_jump); 
+show_debug_message(vspd); 
 // Debugging Zone ^^^
 
 switch(state)
