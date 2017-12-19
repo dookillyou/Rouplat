@@ -49,6 +49,9 @@
           <argument>
             <kind>1</kind>
             <string>draw_text(5, 5, text);
+
+draw_set_font(fnt_main);
+draw_set_color(c_white);
 </string>
           </argument>
         </arguments>
