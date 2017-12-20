@@ -25,6 +25,9 @@
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_white.shader</shader>
   </shaders>
+  <fonts name="fonts">
+    <font>fonts\fnt_main</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
@@ -34,6 +37,7 @@
     <object>objects\obj_gold</object>
     <object>objects\par_enemy</object>
     <object>objects\obj_score</object>
+    <object>objects\obj_timer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
