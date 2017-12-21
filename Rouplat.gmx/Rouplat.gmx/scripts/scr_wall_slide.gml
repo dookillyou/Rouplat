@@ -3,7 +3,7 @@ scr_inputs();
 
 vspd = 2;
 
-if (key_jump)
+if (key_jump) && (!on_ground) 
 {
     state = player_state.wall_jumping; 
 }

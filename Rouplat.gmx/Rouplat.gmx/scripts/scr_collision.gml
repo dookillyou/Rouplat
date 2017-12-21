@@ -27,6 +27,7 @@ if (place_meeting(x,y+vspd,obj_wall_parent))
 if (place_meeting(x,y-vspd,obj_wall_parent))
 {
     can_jump = false;
+     
 }
 
 y += vspd; 
