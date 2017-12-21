@@ -13,10 +13,8 @@
   <code>enum player_state
 {
     normal,
-    slide,
-    wall_jumping,
-    jumping
-    
+    wall_jump,
+    wall_slide
 }</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>

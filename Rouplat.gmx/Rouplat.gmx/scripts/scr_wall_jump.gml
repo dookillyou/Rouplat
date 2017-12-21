@@ -1,23 +1,19 @@
 //Wall Jumping 
-scr_inputs();
-scr_variables(); //Temp name
-// Not even wall jump, but we're close. Logic of it confuses me
-// Create a boost by accident :> 
-  if (place_meeting(x+1,y,obj_wall_parent)) && (key_right)
+if(key_right)
+    {
+        if (place_meeting(x+1,y,obj_wall_parent)) 
         {
-             vspd = -wall_jump;
-             wall_jump += 0.2 //Adds to wall jump causing that boost
+             can_jump = true
+             scr_jumping();
         } 
-        else wall_jumping = 5;
-          
-  if (place_meeting(x-1,y,obj_wall_parent)) && (key_left)
+    }
+    else if (key_left)
+    {      
+        if (place_meeting(x-1,y,obj_wall_parent)) 
         {   
-            vspd = -wall_jump;
-            wall_jump += 0.2 
+            can_jump = true
+            scr_jumping();
         } 
-        else wall_jumping = 5;
-  
-    
+    }else can_jump = false
 
-scr_collision(); 
-
+state = player_state.normal; 
