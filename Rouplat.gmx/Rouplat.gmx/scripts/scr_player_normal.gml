@@ -1,22 +1,12 @@
 //Inputs
 scr_inputs();
-
-var move = key_right - key_left;
-hspd = move * player_spd; 
-
-if (key_left) facing = 0; else if (key_right) facing = 1;  
-
-firing_delay = firing_delay -1;
-
-vspd += grav; 
+scr_variables();
 
 //Jumping
 if (key_jump) && (can_jump == true)
 {
     scr_jumping()
 }
-
-
 
 //Shooting 
 if (key_shoot) && (firing_delay < 0)
@@ -36,7 +26,7 @@ if (place_meeting(x+hspd,y,obj_wall_parent) && (key_jump))
 {
     vspd = 0;
     hspd = 0;
-    state = player_state.wall_jump;
+    state = player_state.jumping;
 }    
 
 
@@ -45,7 +35,7 @@ if (place_meeting(x+sign(hspd),y,obj_wall_parent) && !place_meeting(x,y-2,obj_wa
     {
         if (key_right) || (key_left)
         {
-        state = player_state.wall_slide
+        state = player_state.slide;
         }
     }
 
