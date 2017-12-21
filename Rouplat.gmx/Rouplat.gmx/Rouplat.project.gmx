@@ -15,6 +15,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_variables.gml</script>
     <script>scripts\scr_inputs.gml</script>
     <script>scripts\scr_player_normal.gml</script>
     <script>scripts\scr_jumping.gml</script>
