@@ -35,19 +35,17 @@ facing = 0; // 0 == left and 1 == right
 firing_delay = 10; 
 state = player_state.normal;
 hit = 0;
-on_ground = false; 
-wall_jump = 3; 
 
 //Jumping
 jump_total = 1;
-can_jump = true;
-
+on_ground = false; 
+wall_jump = 3; 
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -64,7 +62,17 @@ can_jump = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>/// Check if on_ground 
+
+if(place_meeting(x,y+1,obj_wall_parent))
+    {
+        on_ground = true;   
+    }
+    else
+    {
+        on_ground = false; 
+    }
+</string>
           </argument>
         </arguments>
       </action>
@@ -86,7 +94,7 @@ can_jump = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Player controls and collisions 
+            <string>/// Player states/Other //Debugger Zone
 // Debugging Zone VVV
 show_debug_message(vspd); 
 // Debugging Zone ^^^
@@ -106,15 +114,9 @@ switch(state)
     
     
 }
-
-    if(place_meeting(x,y+1,obj_wall_parent))
-    {
-        on_ground = true;   
-    }
-    else
-    {
-        on_ground = false; 
-    }
+    //On ground check, I believe it should be in the begin step
+    
+    
 if(hit = 1)
 {
     hit = 0

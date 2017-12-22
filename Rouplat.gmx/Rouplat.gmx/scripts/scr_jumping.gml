@@ -1,10 +1,14 @@
 //jumping 
-vspd = -jump_speed;
-can_jump = false;
+scr_inputs()
+scr_variables(); 
 
-if (vspd < 0) && (!key_jump_held) && !place_meeting(x,y-vspd,obj_wall_parent)
+if (on_ground == true) 
 {
-    vspd = max(vspd,-player_spd/4)
+    state = player_state.normal; 
 }
 
-scr_player_normal(); 
+vspd = -jump_speed;
+
+scr_collision(); 
+
+
