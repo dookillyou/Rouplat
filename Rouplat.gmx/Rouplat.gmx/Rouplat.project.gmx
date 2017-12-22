@@ -22,6 +22,10 @@
     <script>scripts\scr_wall_slide.gml</script>
     <script>scripts\scr_wall_jump.gml</script>
     <script>scripts\scr_collision.gml</script>
+    <scripts name="new">
+      <script>scripts\scr_approach.gml</script>
+      <script>scripts\scr_onground.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_white.shader</shader>
@@ -39,6 +43,8 @@
     <object>objects\par_enemy</object>
     <object>objects\obj_score</object>
     <object>objects\obj_timer</object>
+    <object>objects\par_movement</object>
+    <object>objects\obj_testplayer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>

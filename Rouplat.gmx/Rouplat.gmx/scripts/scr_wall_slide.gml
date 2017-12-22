@@ -31,7 +31,6 @@ if (place_meeting(x-1,y,obj_wall_parent))
 } 
 
 //State goes ham inbetween two walls 
-
 /*
 The logic is so simple, few day break was useful,
 Rather than checking if vspd was 0 && checking for wall collision with
