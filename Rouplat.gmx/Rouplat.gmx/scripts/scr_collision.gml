@@ -1,7 +1,7 @@
 // Horz Collision
 if (place_meeting(x+hspd,y,obj_wall_parent))
  {
- can_jump = true;
+ 
  while(!place_meeting(x+sign(hspd),y,obj_wall_parent))
 {
 x += sign(hspd);
@@ -15,7 +15,7 @@ x += hspd;
 // Vert Collisions
 if (place_meeting(x,y+vspd,obj_wall_parent))
 {
-    can_jump = true;
+    
     while(!place_meeting(x,y+sign(vspd),obj_wall_parent))
     {
         y += sign(vspd);
@@ -24,9 +24,5 @@ if (place_meeting(x,y+vspd,obj_wall_parent))
     vspd = 0  
 }
 
-if (place_meeting(x,y-vspd,obj_wall_parent))
-{
-    can_jump = false;
-}
 
 y += vspd; 

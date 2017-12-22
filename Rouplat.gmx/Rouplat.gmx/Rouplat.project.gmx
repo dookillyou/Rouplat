@@ -17,11 +17,13 @@
   <scripts name="scripts">
     <script>scripts\scr_variables.gml</script>
     <script>scripts\scr_inputs.gml</script>
-    <script>scripts\scr_player_normal.gml</script>
-    <script>scripts\scr_jumping.gml</script>
-    <script>scripts\scr_wall_slide.gml</script>
-    <script>scripts\scr_wall_jump.gml</script>
     <script>scripts\scr_collision.gml</script>
+    <scripts name="States">
+      <script>scripts\scr_player_normal.gml</script>
+      <script>scripts\scr_wall_slide.gml</script>
+      <script>scripts\scr_wall_jump.gml</script>
+      <script>scripts\scr_jumping.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_white.shader</shader>

@@ -10,7 +10,7 @@ state = player_state.normal;
 vspd = 2;
 >>>>>>> master
 
-if (key_jump)
+if (key_jump) && (!on_ground) 
 {
     state = player_state.wall_jumping; 
 }
