@@ -15,20 +15,20 @@ if (key_jump)
     }*/
     
 // *New* check if not sliding by Doo         
-if (place_meeting(x+1,y,obj_wall_parent)) 
+if (place_meeting(x+1,y,obj_wall_parent))
 {
     if(!key_right)
         {
             state = player_state.normal;
         }
-} 
+} else state = player_state.normal;
 if (place_meeting(x-1,y,obj_wall_parent)) 
 {   
     if (!key_left)
         {
             state = player_state.normal;
         }
-} 
+} else state = player_state.normal;
 
 //State goes ham inbetween two walls 
 /*
