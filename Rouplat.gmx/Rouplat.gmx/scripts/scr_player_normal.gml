@@ -3,22 +3,22 @@ scr_inputs();
 scr_variables();
 
 //Jumping
-if (key_jump) && (can_jump == true)
+if (key_jump) //&& (on_ground == true)
 {
-    scr_jumping()
+    state = player_state.jumping; 
 }
 
 //Wall jumping
-if (place_meeting(x+hspd,y,obj_wall_parent) && (key_jump))
+/*if (place_meeting(x+hspd,y,obj_wall_parent) && (key_jump))
 {
     vspd = 0;
     hspd = 0;
     state = player_state.jumping;
-}    
+} */   
 
 
 //Wall Sliding
-if (place_meeting(x+sign(hspd),y,obj_wall_parent) && !place_meeting(x,y-2,obj_wall_parent) && !(key_jump))
+if (place_meeting(x+sign(hspd),y,obj_wall_parent) && (!key_jump))
     {
         if (key_right) || (key_left)
         {
