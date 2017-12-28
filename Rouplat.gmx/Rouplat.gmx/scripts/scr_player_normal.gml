@@ -3,22 +3,9 @@ scr_inputs();
 scr_variables();
 
 //Jumping
-if (key_jump) && (on_ground == true)
+if (key_jump) //&& (on_ground == true)
 {
     state = player_state.jumping; 
-}
-
-//Shooting 
-if (key_shoot) && (firing_delay < 0)
-{
-firing_delay = 5
-
-    with(instance_create(x,y, obj_bullet))
-    {
-    speed = 25;
-    direction = point_direction(x,y,mouse_x,mouse_y) + irandom_range(-3,3); 
-    image_angle = direction; 
-    }
 }
 
 //Wall jumping
