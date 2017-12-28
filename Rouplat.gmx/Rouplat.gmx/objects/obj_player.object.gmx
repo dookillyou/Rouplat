@@ -19,13 +19,22 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
             <string>/// Initialize the player variables 
+enum player_state
+{
+    movement, // 0
+    slide, // 1
+    wall_jumping, // 2
+    jumping  // 3
+    
+}
+
 grav = 0.4;
 hspd = 0;
 vspd = 0;
@@ -33,13 +42,15 @@ player_spd = 4;
 jump_speed = 10;
 facing = 0; // 0 == left and 1 == right
 firing_delay = 10; 
-state = player_state.normal;
+state = player_state.movement;
 hit = 0;
 
 //Jumping
-jump_total = 1;
-on_ground = false; 
-wall_jump = 3; 
+in_air = false;
+on_ground = true; 
+wall_jump = false; 
+
+
 </string>
           </argument>
         </arguments>
@@ -62,16 +73,16 @@ wall_jump = 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Check if on_ground 
-
-if(place_meeting(x,y+1,obj_wall_parent))
-    {
-        on_ground = true;   
-    }
-    else
-    {
-        on_ground = false; 
-    }
+            <string>if place_meeting(x,y+1,obj_wall_parent)
+{
+    on_ground = true;
+    in_air = false;
+}
+else
+{
+    on_ground = false;
+    in_air = true;
+}
 </string>
           </argument>
         </arguments>
@@ -96,7 +107,7 @@ if(place_meeting(x,y+1,obj_wall_parent))
             <kind>1</kind>
             <string>/// Player states/Other //Debugger Zone
 // Debugging Zone VVV
-show_debug_message(vspd); 
+show_debug_message(on_ground); 
 // Debugging Zone ^^^
 
 //Need more time to look at the states / fix them 
@@ -105,7 +116,7 @@ show_debug_message(vspd);
 
 switch(state)
 {
-    case player_state.normal: scr_player_normal(); break;
+    case player_state.movement: scr_movement(); break;
     case player_state.slide: scr_wall_slide(); break;
     case player_state.wall_jumping: scr_wall_jump(); break;
     case player_state.jumping: scr_jumping(); break;
@@ -114,8 +125,19 @@ switch(state)
     
     
 }
-    //On ground check, I believe it should be in the begin step
     
+//Shooting 
+if (key_shoot) &amp;&amp; (firing_delay &lt; 0)
+{
+firing_delay = 5
+
+    with(instance_create(x,y, obj_bullet))
+    {
+    speed = 25;
+    direction = point_direction(x,y,mouse_x,mouse_y) + irandom_range(-3,3); 
+    image_angle = direction; 
+    }
+}
     
 if(hit = 1)
 {

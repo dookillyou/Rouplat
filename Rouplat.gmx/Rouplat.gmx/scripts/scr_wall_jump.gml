@@ -1,5 +1,6 @@
 //Wall Jumping 
 scr_inputs();
+scr_variables();
 vspd += -0.5;
 
 if (place_meeting(x+1,y,obj_wall_parent)) && (key_right) && (vspd == 10)

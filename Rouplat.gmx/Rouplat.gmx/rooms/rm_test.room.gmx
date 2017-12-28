@@ -10,14 +10,7 @@
   <persistent>0</persistent>
   <colour>8404992</colour>
   <showcolour>-1</showcolour>
-  <code>enum player_state
-{
-    normal,
-    slide,
-    wall_jumping,
-    jumping
-    
-}</code>
+  <code></code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

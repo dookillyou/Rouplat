@@ -19,7 +19,7 @@ if (place_meeting(x+1,y,obj_wall_parent))
 {
     if(!key_right)
         {
-            state = player_state.normal;
+            state = player_state.movement;
         }
 }
 
@@ -27,18 +27,18 @@ if (place_meeting(x-1,y,obj_wall_parent))
 {   
     if (!key_left)
         {
-            state = player_state.normal;
+            state = player_state.movement;
         }
 }
 
 if (!place_meeting(x,y,obj_wall_parent)) 
 {   
-    state = player_state.normal;
+    state = player_state.movement;
 }
 
 if (!place_meeting(x,y+1,obj_wall_parent)) 
 {   
-    state = player_state.normal;
+    state = player_state.movement;
 }
 
 
