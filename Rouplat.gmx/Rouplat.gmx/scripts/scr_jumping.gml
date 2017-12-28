@@ -4,10 +4,17 @@ scr_variables();
         
     vspd = -jump_speed;
 
+<<<<<<< HEAD
 if (on_ground == true) 
 {
     state = player_state.movement; 
 }
+=======
+//if (on_ground == true) 
+//{
+    state = player_state.normal; 
+//}
+>>>>>>> b64c45099e02de3a64fcd7149802e87b7a0fe52a
 
 //if (in_air = false)
 //{

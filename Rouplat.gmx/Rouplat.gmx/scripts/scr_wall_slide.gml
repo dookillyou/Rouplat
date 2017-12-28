@@ -3,7 +3,7 @@ scr_inputs();
 
 vspd = 2;
 
-if (key_jump) && (!on_ground) 
+if (key_jump)
 {
     state = player_state.wall_jumping; 
 }
@@ -15,20 +15,20 @@ if (key_jump) && (!on_ground)
     }*/
     
 // *New* check if not sliding by Doo         
-if (place_meeting(x+1,y,obj_wall_parent)) 
+if (place_meeting(x+1,y,obj_wall_parent))
 {
     if(!key_right)
         {
             state = player_state.movement;
         }
-}
-
+} else state = player_state.normal;
 if (place_meeting(x-1,y,obj_wall_parent)) 
 {   
     if (!key_left)
         {
             state = player_state.movement;
         }
+<<<<<<< HEAD
 }
 
 if (!place_meeting(x,y,obj_wall_parent)) 
@@ -41,13 +41,14 @@ if (!place_meeting(x,y+1,obj_wall_parent))
     state = player_state.movement;
 }
 
+=======
+} else state = player_state.normal;
+>>>>>>> b64c45099e02de3a64fcd7149802e87b7a0fe52a
 
 //State goes ham inbetween two walls 
-
 /*
 The logic is so simple, few day break was useful,
 Rather than checking if vspd was 0 && checking for wall collision with
-sign(hspd). Check for the wall then see if you ! using
- the button of choice 
+sign(hspd). Check for the wall then see if you ! using the button of choice 
 */
 scr_collision(); 

@@ -17,12 +17,22 @@
   <scripts name="scripts">
     <script>scripts\scr_variables.gml</script>
     <script>scripts\scr_inputs.gml</script>
+    <script>scripts\scr_player_normal.gml</script>
+    <script>scripts\scr_jumping.gml</script>
+    <script>scripts\scr_wall_slide.gml</script>
+    <script>scripts\scr_wall_jump.gml</script>
     <script>scripts\scr_collision.gml</script>
+<<<<<<< HEAD
     <scripts name="States">
       <script>scripts\scr_movement.gml</script>
       <script>scripts\scr_wall_slide.gml</script>
       <script>scripts\scr_wall_jump.gml</script>
       <script>scripts\scr_jumping.gml</script>
+=======
+    <scripts name="new">
+      <script>scripts\scr_approach.gml</script>
+      <script>scripts\scr_onground.gml</script>
+>>>>>>> b64c45099e02de3a64fcd7149802e87b7a0fe52a
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -41,6 +51,8 @@
     <object>objects\par_enemy</object>
     <object>objects\obj_score</object>
     <object>objects\obj_timer</object>
+    <object>objects\par_movement</object>
+    <object>objects\obj_testplayer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
