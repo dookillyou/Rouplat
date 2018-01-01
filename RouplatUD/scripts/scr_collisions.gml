@@ -1,4 +1,5 @@
 /// scr_collision()
+
 //Shaun collision system 
 
 if (place_meeting(x+x_speed,y,obj_wall_parent))
@@ -19,7 +20,6 @@ if (place_meeting(x,y+y_speed,obj_wall_parent))
             y += sign(y_speed);
         }
     y_speed = 0
-    can_jump = true;
 }
 
 y += y_speed; 
