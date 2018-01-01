@@ -13,15 +13,17 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Player States">
-      <script>scripts\scr_player_normal.gml</script>
-      <script>scripts\scr_player_jumping.gml</script>
+      <script>scripts\scr_player_ground.gml</script>
+      <script>scripts\scr_player_air.gml</script>
       <script>scripts\scr_player_wall_slide.gml</script>
     </scripts>
     <scripts name="Useful Scripts">
       <script>scripts\scr_enum_init.gml</script>
-      <script>scripts\scr_collisions.gml</script>
-      <script>scripts\scr_player_inputs.gml</script>
+      <script>scripts\scr_inputs.gml</script>
       <script>scripts\scr_player_variables.gml</script>
+      <script>scripts\scr_on_ground.gml</script>
+      <script>scripts\scr_collisions.gml</script>
+      <script>scripts\scr_last_state.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

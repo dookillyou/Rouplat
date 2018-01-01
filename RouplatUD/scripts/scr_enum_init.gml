@@ -2,7 +2,7 @@
 
 enum player_state
 {
-    normal, // 0 
-    jumping, // 1
+    ground, // 0 
+    air, // 1
     wall_slide // 2
 }

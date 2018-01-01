@@ -30,19 +30,25 @@
 grav = 0.2
 x_speed = 0
 y_speed = 0
-p_movespeed = 6;
-p_jumpspeed = 8;
 on_ground = false;
 p_facing = 0; // -1 = left, 1 = right
 
-timer = 0;  
+current_state = scr_player_ground; 
+last_state = ""; 
 
-// Can.. checks 
-can_jump = true; 
-can_slide = true;
-can_wall_jump = true; 
+//Sliding
+slide_timer = 0;
+can_slide = true; 
 
-current_state = scr_player_normal; 
+//Jumping
+p_jumpspeed = 8;
+jump_timer = 0;
+can_jump = true;  
+
+// Movement
+p_base_movespeed = 4;
+p_max_speed = 8;
+
 </string>
           </argument>
         </arguments>
@@ -65,17 +71,8 @@ current_state = scr_player_normal;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Ground check for jumps
-if (place_meeting(x,y+1,obj_wall_parent))
-{
-    on_ground = true;
-    can_jump = true;
-}
-else
-{
-    on_ground = false; 
-    can_jump = false;
-}
+            <string>scr_on_ground();
+
 
 
 
@@ -104,15 +101,15 @@ else
             <kind>1</kind>
             <string>// Setup FSM
 //Debugging Zone VVV
-show_debug_message(y_speed);
+show_debug_message(slide_timer);
 //Debugging Zone ^^^ 
 
 //States
 switch(current_state)
 {
-    case player_state.normal: scr_player_normal(); break; 
-    case player_state.jumping: scr_player_jumping(); break;
-    case player_state.wall_slide: scr_player_wall_slide(); break; 
+    case player_state.ground: scr_player_ground(); break; 
+    case player_state.air: scr_player_air(); break; 
+    case player_state.wall_slide: scr_player_wall_slide(); 
 }
 </string>
           </argument>
