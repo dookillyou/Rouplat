@@ -119,8 +119,12 @@ switch(current_state)
 }
 
 //Shooting 
-shot_timer++
-if(key_shoot) &amp;&amp; (shot_timer &gt;= 9)
+if (shot_timer != 10)
+{
+    shot_timer++
+}
+
+if(key_shoot) &amp;&amp; (shot_timer &gt;= 6)
 {
     shot_timer = 0
     with(instance_create(x,y,obj_bullet)) 
@@ -130,6 +134,7 @@ if(key_shoot) &amp;&amp; (shot_timer &gt;= 9)
         image_angle = direction; 
     }
 }
+
 
 
 //hit
