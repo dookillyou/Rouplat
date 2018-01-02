@@ -32,6 +32,7 @@
       <script>scripts\scr_collisions.gml</script>
       <script>scripts\scr_last_state.gml</script>
     </scripts>
+    <script>scripts\scr_chance.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_white.shader</shader>
@@ -42,7 +43,6 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_gun</object>
-    <object>objects\obj_control</object>
     <objects name="Walls">
       <object>objects\obj_wall_parent</object>
       <object>objects\obj_wall</object>
@@ -51,11 +51,16 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_gold</object>
     <object>objects\par_enemy</object>
-    <object>objects\obj_score</object>
-    <object>objects\obj_timer</object>
     <object>objects\obj_goal</object>
+    <objects name="no sprite">
+      <object>objects\obj_timer</object>
+      <object>objects\obj_score</object>
+      <object>objects\obj_levelgen</object>
+      <object>objects\obj_control</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_level1</room>
     <room>rooms\rm_testing</room>
     <room>rooms\rm_testing2</room>
   </rooms>
