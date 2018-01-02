@@ -49,9 +49,12 @@ can_jump = true;
 p_base_movespeed = 4;
 p_max_speed = 8;
 
-//shooting
-firing_delay = 10; 
+//Health
 hit = 0;
+hp = 1;
+
+//Shooting
+shot_timer = 0
 </string>
           </argument>
         </arguments>
@@ -116,24 +119,27 @@ switch(current_state)
 }
 
 //Shooting 
-if (key_shoot) //&amp;&amp; (firing_delay &lt; 0)
+shot_timer++
+if(key_shoot) &amp;&amp; (shot_timer &gt;= 9)
 {
-firing_delay = 5
-
-    with(instance_create(x,y, obj_bullet))
-    {
-    speed = 25;
-    direction = point_direction(x,y,mouse_x,mouse_y) + irandom_range(-3,3); 
-    image_angle = direction; 
+    shot_timer = 0
+    with(instance_create(x,y,obj_bullet)) 
+    { 
+        speed = 25;
+        direction = point_direction(x,y,mouse_x,mouse_y) + irandom_range(-3,3); 
+        image_angle = direction; 
     }
 }
 
+
+//hit
 if(hit = 1)
 {
     hit = 0
-    //hp-=5
+    hp-=0
 }
-/*
+
+//death
 if(hp &lt; 0)
 {
     instance_destroy()
