@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>randomize();
 
-tilesize = 32
+tilesize = 64
 
 for (var i = 0; i &lt; room_width div tilesize; i++)
 {
@@ -57,6 +57,18 @@ repeat (100)
     x = clamp(x, 0 + tilesize, room_width - tilesize * 2);
     y = clamp(y, 0 + tilesize, room_height - tilesize * 2);
 }
+
+
+///objects
+while(instance_number(obj_enemy) &lt; 5) 
+{
+    instance_create(x, y, obj_enemy)
+}
+
+
+
+
+
 </string>
           </argument>
         </arguments>

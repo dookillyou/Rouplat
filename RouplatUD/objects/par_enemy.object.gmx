@@ -25,9 +25,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hit=0
+            <string>//put in order later
+hit=0
 hp = 100
-grav = 0.4
+grav = 0.2
+x_speed = 0
+y_speed = 0
+on_ground = false;
+p_facing = 0; // -1 = left, 1 = right
+p_base_movespeed = 4;
+p_max_speed = 8;
+slide_timer = 0;
+can_slide = true; 
+
+current_state = scr_player_ground; 
+last_state = ""; 
+
+
+while (!place_empty(x, y))
+{
+   x = random(room_width);
+   y = random(room_height);
+}
 </string>
           </argument>
         </arguments>

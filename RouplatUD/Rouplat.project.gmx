@@ -19,9 +19,13 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="Enemy States">
+      <script>scripts\scr_enemy_ground.gml</script>
+    </scripts>
     <scripts name="Player States">
       <script>scripts\scr_player_ground.gml</script>
       <script>scripts\scr_player_air.gml</script>
+      <script>scripts\scr_enemy_air.gml</script>
       <script>scripts\scr_player_wall_slide.gml</script>
     </scripts>
     <scripts name="Useful Scripts">

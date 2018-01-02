@@ -25,7 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(hit = 1)
+            <string>switch(current_state)
+{
+    case player_state.ground: scr_enemy_ground(); break; 
+    case player_state.air: scr_enemy_air(); break;
+}
+
+
+if(hit = 1)
 {
 
     hit = 0
