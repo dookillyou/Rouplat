@@ -20,7 +20,10 @@ if (y_speed < 10)
 // Wall sliding timer
 if (slide_timer <= 40) && (place_meeting(x+p_facing,y,obj_wall_parent))
 {
-    slide_timer++
+    if (can_slide == false)
+    {
+        slide_timer++
+    }
 }
 else
 {

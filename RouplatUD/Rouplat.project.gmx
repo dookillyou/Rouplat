@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_gun</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -28,6 +29,7 @@
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\obj_gun</object>
     <object>objects\obj_control</object>
     <objects name="Walls">
       <object>objects\obj_wall_parent</object>
