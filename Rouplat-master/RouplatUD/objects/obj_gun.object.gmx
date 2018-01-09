@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>shot_timer = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
@@ -53,6 +76,23 @@ y = obj_player.y
           <argument>
             <kind>1</kind>
             <string>image_angle = point_direction(x,y,mouse_x,mouse_y)
+
+//Shooting 
+if (shot_timer != 10)
+{
+    shot_timer++
+}
+
+if(mouse_check_button(mb_left)) &amp;&amp; (shot_timer &gt;= 6)
+{
+    shot_timer = 0
+    with(instance_create(x,y,obj_bullet)) 
+    { 
+        speed = 25;
+        direction = point_direction(x,y,mouse_x,mouse_y) + irandom_range(-3,3); 
+        image_angle = direction; 
+    }
+}
 </string>
           </argument>
         </arguments>
