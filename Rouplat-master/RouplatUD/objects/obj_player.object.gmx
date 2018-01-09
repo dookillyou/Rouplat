@@ -196,7 +196,7 @@ if(hp &lt; 0)
           <argument>
             <kind>1</kind>
             <string>/// Draw States
-draw_set_colour(c_white)
+draw_set_colour(c_yellow);
 draw_text(5,20,"State:" + string(current_state)); 
 </string>
           </argument>
