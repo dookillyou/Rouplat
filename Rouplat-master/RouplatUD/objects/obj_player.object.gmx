@@ -75,11 +75,6 @@ hp = 1;
           <argument>
             <kind>1</kind>
             <string>scr_on_ground();
-
-
-
-
-
 </string>
           </argument>
         </arguments>

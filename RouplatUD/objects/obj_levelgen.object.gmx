@@ -39,10 +39,10 @@ for (var i = 0; i &lt; room_width div tilesize; i++)
 
 var dir = 0;
 
-repeat (100)
+repeat (150)
 {   
     //manmade(1) --------- natural(100)
-    if (scr_chance(75))
+    if (scr_chance(15))
     {
         dir = choose(0, 1, 2, 3) * 90;
     }
@@ -57,14 +57,18 @@ repeat (100)
     x = clamp(x, 0 + tilesize, room_width - tilesize * 2);
     y = clamp(y, 0 + tilesize, room_height - tilesize * 2);
 }
-
+//goal
+instance_create(x,y,obj_goal)
 
 ///objects
 while(instance_number(obj_enemy) &lt; 5) 
 {
     instance_create(x, y, obj_enemy)
 }
-
+while(instance_number(obj_closeddoor) &lt; 5) 
+{
+    instance_create(x, y, obj_closeddoor)
+}
 
 
 

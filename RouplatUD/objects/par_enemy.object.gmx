@@ -42,13 +42,17 @@ current_state = scr_player_ground;
 last_state = ""; 
 
 
+//randomgen
 while (!place_empty(x, y))
 {
    x = random(room_width);
    y = random(room_height);
+   if (!place_meeting(x,y+1,obj_wall_parent))
+   {   
+   y = obj_wall.y+1;
+   }
 }
 
-//place_meeting(x,y+1,obj_wall_parent)
 </string>
           </argument>
         </arguments>
