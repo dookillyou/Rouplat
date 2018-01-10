@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//put in order later
 hit=0
-hp = 100
+hp = 20
 grav = 0.2
 x_speed = 0
 y_speed = 0
@@ -43,6 +43,7 @@ last_state = "";
 
 
 //randomgen
+/*
 while (!place_empty(x, y))
 {
    x = random(room_width);
@@ -52,6 +53,7 @@ while (!place_empty(x, y))
    y = obj_wall.y+1;
    }
 }
+*/
 
 </string>
           </argument>

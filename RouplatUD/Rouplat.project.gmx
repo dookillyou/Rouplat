@@ -51,8 +51,7 @@
     <objects name="Walls">
       <object>objects\obj_wall_parent</object>
       <object>objects\obj_wall</object>
-      <object>objects\obj_closeddoor</object>
-      <object>objects\obj_opendoor</object>
+      <object>objects\obj_door</object>
     </objects>
     <object>objects\obj_bullet</object>
     <object>objects\obj_enemy</object>
@@ -67,8 +66,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_level1</room>
     <room>rooms\rm_testing</room>
+    <room>rooms\rm_level1</room>
     <room>rooms\rm_testing2</room>
   </rooms>
   <help>

@@ -99,7 +99,7 @@ hp = 1;
             <kind>1</kind>
             <string>// Setup FSM
 //Debugging Zone VVV
-show_debug_message(mouse_x);
+//show_debug_message(mouse_x);
 //Debugging Zone ^^^ 
 
 //States
@@ -115,7 +115,7 @@ switch(current_state)
 if(hit = 1)
 {
     hit = 0
-    hp-=0
+    hp -=0
 }
 
 //death

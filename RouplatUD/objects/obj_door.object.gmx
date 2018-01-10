@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//randomgen
+            <string>/// Initialize the Door Variables
+player_near_door = false; 
+image_speed = 0;
+
+//randomgen
+/*
 while (!place_empty(x, y))
 {
    x = random(room_width);
@@ -35,6 +40,7 @@ while (!place_empty(x, y))
    y = obj_wall.y+1;
    }
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -57,12 +63,62 @@ while (!place_empty(x, y))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(place_meeting(x-1,y,obj_player)||place_meeting(x+1,y,obj_player)||
-place_meeting(x,y-1,obj_player)||place_meeting(x,y+1,obj_player))
+            <string>show_debug_message(player_near_door);
+
+
+if (collision_rectangle(x - 64, y + 64, x + 64, y - 64, obj_player, true, true))
 {
-instance_create(x,y,obj_opendoor)
-instance_destroy();
+    player_near_door = true;
 }
+else 
+{
+    player_near_door = false;
+}   
+if (player_near_door = true)
+{
+    if (keyboard_check_pressed(ord("E")))
+    {
+        if (image_index == 0)
+        {
+            image_index = 1;
+        }
+        else
+        {
+            image_index = 0;
+        }
+    }
+}
+
+
+
+
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_rectangle_colour(x - 64, y - 64, x + 64, y + 64, c_red, c_red, c_red, c_red, true)
+draw_self();
+ 
 </string>
           </argument>
         </arguments>
