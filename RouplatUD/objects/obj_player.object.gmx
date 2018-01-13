@@ -52,6 +52,10 @@ p_max_speed = 8;
 //Health
 hit = 0;
 hp = 1;
+
+
+
+
 </string>
           </argument>
         </arguments>

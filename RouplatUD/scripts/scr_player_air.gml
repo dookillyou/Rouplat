@@ -42,6 +42,7 @@ if (key_right || key_left) && (place_meeting(x+p_facing,y,obj_wall_parent))
 }
 
 // Off wall jump 
+
 if (last_state = player_state.wall_slide)
 {
     if (key_jump)
