@@ -18,6 +18,8 @@
       <sprite>sprites\spr_large_wall</sprite>
       <sprite>sprites\spr_gold</sprite>
       <sprite>sprites\spr_goal</sprite>
+      <sprite>sprites\spr_healthbarback</sprite>
+      <sprite>sprites\spr_healthbar</sprite>
     </sprites>
     <sprites name="Gun Related Sprites">
       <sprite>sprites\spr_gun</sprite>
@@ -76,6 +78,8 @@
     <objects name="Enemy Objects">
       <object>objects\obj_enemy</object>
       <object>objects\par_enemy</object>
+      <object>objects\obj_enemybullet</object>
+      <object>objects\obj_enemygun</object>
     </objects>
     <objects name="Game Objects">
       <object>objects\obj_gold</object>
