@@ -26,11 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Wall Check after draw
-<<<<<<< HEAD
-if(place_meeting(x,y,obj_wall_parent))
-=======
 if(place_meeting(x,y,obj_wall_parent)||place_meeting(x,y,par_enemy))
->>>>>>> cddc29bd746d5b17b07456acb75dea7ffb64d0b8
 {
     instance_destroy(); 
 }
