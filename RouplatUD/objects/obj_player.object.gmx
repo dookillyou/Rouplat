@@ -230,7 +230,11 @@ draw_text(5,20,"State:" + string(current_state));
             <string>draw_self();
 
 draw_sprite(spr_healthbarback,-1,x,y-32);
+<<<<<<< HEAD
 draw_sprite_stretched(spr_healthbar,-1,x-24,y-36,hp/maxhp*48,8)
+=======
+draw_sprite_stretched(spr_healthbar,-1,x+1,y-31,hp/maxhp*48,8)
+>>>>>>> cddc29bd746d5b17b07456acb75dea7ffb64d0b8
 
 if(hit &gt; 0)
 {

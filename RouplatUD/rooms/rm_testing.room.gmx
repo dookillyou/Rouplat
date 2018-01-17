@@ -119,10 +119,16 @@
     <instance objName="obj_large_wall" x="928" y="192" name="inst_013D9BDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_large_wall" x="544" y="0" name="inst_59DCCB24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_large_wall" x="288" y="0" name="inst_836010F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+<<<<<<< HEAD
     <instance objName="obj_enemy" x="416" y="128" name="inst_EF8DE062" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="832" y="256" name="inst_98EB3ADE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="832" y="384" name="inst_D9AA0C6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemygun" x="384" y="128" name="inst_4F87FE18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+=======
+    <instance objName="obj_enemygun" x="800" y="256" name="inst_41F0593E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemygun" x="800" y="384" name="inst_9D98F194" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemygun" x="416" y="128" name="inst_44D1DE3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+>>>>>>> cddc29bd746d5b17b07456acb75dea7ffb64d0b8
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

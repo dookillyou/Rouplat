@@ -48,9 +48,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
+<<<<<<< HEAD
             <string>//instance_nearest(x,y,obj_enemy)
 x = obj_enemy.x;
 y = obj_enemy.y;
+=======
+            <string>instance_nearest(x,y,obj_enemy)
+//x = obj_enemy.x;
+//y = obj_enemy.y;
+>>>>>>> cddc29bd746d5b17b07456acb75dea7ffb64d0b8
 </string>
           </argument>
         </arguments>
