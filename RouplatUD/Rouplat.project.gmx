@@ -15,7 +15,6 @@
     </sprites>
     <sprites name="Game Sprites">
       <sprite>sprites\spr_small_wall</sprite>
-      <sprite>sprites\spr_large_wall</sprite>
       <sprite>sprites\spr_gold</sprite>
       <sprite>sprites\spr_goal</sprite>
       <sprite>sprites\spr_healthbarback</sprite>
@@ -62,7 +61,6 @@
     <objects name="Collision Objects">
       <object>objects\obj_wall_parent</object>
       <object>objects\obj_small_wall</object>
-      <object>objects\obj_large_wall</object>
       <object>objects\obj_door</object>
     </objects>
     <objects name="Gun/Bullets Objects">
@@ -77,9 +75,9 @@
     </objects>
     <objects name="Enemy Objects">
       <object>objects\obj_enemy</object>
-      <object>objects\par_enemy</object>
-      <object>objects\obj_enemybullet</object>
-      <object>objects\obj_enemygun</object>
+      <object>objects\obj_parent_enemy</object>
+      <object>objects\obj_enemy_bullet</object>
+      <object>objects\obj_enemy_gun</object>
     </objects>
     <objects name="Game Objects">
       <object>objects\obj_gold</object>

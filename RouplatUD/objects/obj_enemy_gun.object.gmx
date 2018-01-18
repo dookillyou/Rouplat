@@ -87,7 +87,7 @@ if !collision_line(x,y,obj_player.x,obj_player.y,obj_wall_parent,1,0)&amp;&amp; 
     image_angle = point_direction(x,y,obj_player.x,obj_player.y)
     
     shot_timer = 0
-    with(instance_create(x,y,obj_enemybullet)) 
+    with(instance_create(x,y,obj_enemy_bullet)) 
     { 
         speed = 25;
         direction = point_direction(x,y,obj_player.x,obj_player.y) + irandom_range(-3,3); 

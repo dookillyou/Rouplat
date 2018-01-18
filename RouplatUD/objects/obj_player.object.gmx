@@ -139,7 +139,7 @@ if(hp &lt; 0)
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemybullet">
+    <event eventtype="4" ename="obj_enemy_bullet">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -162,7 +162,7 @@ if(hp &lt; 0)
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="par_enemy">
+    <event eventtype="4" ename="obj_parent_enemy">
       <action>
         <libid>1</libid>
         <id>603</id>
