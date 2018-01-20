@@ -8,6 +8,31 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Initialize the score 
+
+player_score = 0; 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,7 +50,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text = 'Score: ' + string(score) +'#';
+            <string>/// Run the Player score
+
+player_score = 'Score: ' + string(score);
 </string>
           </argument>
         </arguments>
@@ -48,7 +75,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(5, 5, text);
+            <string>/// Draw the score
+
+draw_text(5, 5, player_score);
 
 draw_set_font(fnt_main);
 draw_set_color(c_white);

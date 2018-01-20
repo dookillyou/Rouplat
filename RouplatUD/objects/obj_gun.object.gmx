@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>shot_timer = 0
+            <string>/// Initialize the Gun 
+shot_timer = 0
 </string>
           </argument>
         </arguments>
@@ -49,6 +50,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Follow the player
+
 x = obj_player.x
 y = obj_player.y
 </string>
@@ -73,14 +75,17 @@ y = obj_player.y
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = point_direction(x,y,mouse_x,mouse_y)
+            <string>/// Make the Gun Function 
 
-//Shooting 
+image_angle = point_direction(x,y,mouse_x,mouse_y)
+
+//Shooting timer 
 if (shot_timer != 10)
 {
     shot_timer++
 }
 
+//Creating the bullet
 if(mouse_check_button(mb_left)) &amp;&amp; (shot_timer &gt;= 6)
 {
     shot_timer = 0

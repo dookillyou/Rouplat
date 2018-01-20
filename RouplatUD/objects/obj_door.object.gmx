@@ -29,7 +29,7 @@
 player_near_door = false; 
 image_speed = 0;
 
-//randomgen
+// Random gen
 /*
 while (!place_empty(x, y))
 {
@@ -63,9 +63,9 @@ while (!place_empty(x, y))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(player_near_door);
+            <string>/// Door System 
 
-
+// Door Open/Close collision box 
 if (collision_rectangle(x - 64, y + 64, x + 64, y - 64, obj_player, true, true))
 {
     player_near_door = true;
@@ -74,8 +74,11 @@ else
 {
     player_near_door = false;
 }   
+
+// Open or close the door if near the door 
 if (player_near_door = true)
 {
+    // Makes it so the player can't close the door when he/she is in it VV
     if (!collision_rectangle(x + 30, y - 30, x - 30, y + 30, obj_player, true, true))
     {
         if (keyboard_check_pressed(ord("E")))
@@ -83,12 +86,12 @@ if (player_near_door = true)
             if (image_index == 0)
             {
                 image_index = 1;
-                mask_index = spr_blank; 
+                mask_index = spr_blank; //Remove the collision mask 
             }
             else
             {
                 image_index = 0;
-                mask_index = spr_door; 
+                mask_index = spr_door; // Apply it back 
             }
         }
     }
@@ -121,7 +124,9 @@ if (player_near_door = true)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_rectangle_colour(x - 64, y - 64, x + 64, y + 64, c_red, c_red, c_red, c_red, true)
+            <string>/// Door Debug
+
+draw_rectangle_colour(x - 64, y - 64, x + 64, y + 64, c_red, c_red, c_red, c_red, true);
 draw_self(); 
 
  

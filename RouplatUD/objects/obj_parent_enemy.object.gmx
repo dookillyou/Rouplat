@@ -25,22 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//put in order later
-hit=0
-hp = 20
-grav = 0.2
-x_speed = 0
-y_speed = 0
+            <string>/// Initialize Enemy Parent Variables 
+
+//put in order later
+hit = 0;
+hp = 20;
+grav = 0.2;
+x_speed = 0;
+y_speed = 0;
 on_ground = false;
 p_facing = 0; // -1 = left, 1 = right
 p_base_movespeed = 4;
 p_max_speed = 8;
-slide_timer = 0;
-can_slide = true; 
-
-current_state = scr_player_ground; 
-last_state = ""; 
-
 shot_timer = 0
 
 //randomgen
@@ -78,25 +74,21 @@ while (!place_empty(x, y))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//movement
-switch(current_state)
-{
-    case player_state.ground: scr_enemy_ground(); break; 
-    case player_state.air: scr_enemy_air(); break;
-}
+            <string>/// Run the enemys base variables
+
+scr_on_ground();
 
 //damage
 if(hit = 1)
 {
-
-    hit = 0
-    hp-=5
+    hit = 0;
+    hp -= 5;
 }
 
 //death
 if(hp &lt; 0)
 {
-    instance_destroy()
+    instance_destroy();
 }
 </string>
           </argument>
@@ -120,7 +112,8 @@ if(hp &lt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hit=1
+            <string>/// Enemy hit collision with Bullet 
+hit = 1;
 </string>
           </argument>
         </arguments>
@@ -143,7 +136,9 @@ if(hp &lt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self()
+            <string>/// Draw Enemy Gunner sprite
+
+draw_self();
 
 if(hit &gt; 0)
 {

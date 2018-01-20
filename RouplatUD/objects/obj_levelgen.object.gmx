@@ -25,9 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>randomize();
+            <string>/// Create the level
 
-tilesize = 64
+randomize();
+
+tilesize = 64;
 
 for (var i = 0; i &lt; room_width div tilesize; i++)
 {
@@ -58,16 +60,16 @@ repeat (150)
     y = clamp(y, 0 + tilesize, room_height - tilesize * 2);
 }
 //goal
-instance_create(x,y,obj_goal)
+instance_create(x,y,obj_goal);
 
 ///objects
 while(instance_number(obj_enemy) &lt; 5) 
 {
-    instance_create(x, y, obj_enemy)
+    instance_create(x, y, obj_enemy);
 }
 while(instance_number(obj_closeddoor) &lt; 5) 
 {
-    instance_create(x, y, obj_closeddoor)
+    instance_create(x, y, obj_closeddoor);
 }
 
 
@@ -76,22 +78,6 @@ while(instance_number(obj_closeddoor) &lt; 5)
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>331</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_restart_game</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>

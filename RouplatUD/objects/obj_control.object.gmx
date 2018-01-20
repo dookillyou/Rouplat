@@ -25,9 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Control Object 
-
+            <string>/// Control Object( Enums / MACROS / Background objects ) 
 scr_enum_init(); 
+instance_create(x,y,obj_timer);
+instance_create(x,y,obj_score);
+
 </string>
           </argument>
         </arguments>

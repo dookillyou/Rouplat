@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>shot_timer = 0
+            <string>/// Initialize the Gun
+
+shot_timer = 0
 </string>
           </argument>
         </arguments>
@@ -48,7 +50,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_nearest(x,y,obj_enemy)
+            <string>///Stick to the closest enemy
+//Will be changed once I get the enemy gun system working
+
+instance_nearest(x,y,obj_enemy_gunner);
 //x = obj_enemy.x;
 //y = obj_enemy.y;
 </string>
@@ -73,9 +78,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = point_direction(x,y,obj_player.x,obj_player.y)
+            <string>/// Make the gun Function 
 
-//Shooting 
+image_angle = point_direction(x,y,obj_player.x,obj_player.y)
+
+//Shooting timer
 if (shot_timer != 10)
 {
     shot_timer++

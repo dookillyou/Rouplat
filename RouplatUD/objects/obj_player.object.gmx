@@ -27,12 +27,13 @@
             <kind>1</kind>
             <string>/// Init Variables
 // Player variables
-grav = 0.2
-x_speed = 0
-y_speed = 0
+grav = 0.2;
+x_speed = 0;
+y_speed = 0;
 on_ground = false;
 p_facing = 0; // -1 = left, 1 = right
 
+// Player states
 current_state = scr_player_ground; 
 last_state = ""; 
 
@@ -79,7 +80,8 @@ hp = maxhp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_on_ground();
+            <string>/// Player Ground Check
+scr_on_ground();
 </string>
           </argument>
         </arguments>
@@ -102,9 +104,9 @@ hp = maxhp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Setup FSM
+            <string>// Setup Player FSM
 //Debugging Zone VVV
-//show_debug_message(mouse_x);
+show_debug_message(mouse_x);
 //Debugging Zone ^^^ 
 
 //States
@@ -115,22 +117,23 @@ switch(current_state)
     case player_state.wall_slide: scr_player_wall_slide(); 
 }
 
+// Health regen
 if(hp&lt;maxhp)
 {
-    hp++
+    hp++;
 }
 
-//hit
+// Player hit
 if(hit = 1)
 {
-    hit = 0
-    hp -= 5
+    hit = 0;
+    hp -= 5;
 }
 
-//death
+// Player death
 if(hp &lt; 0)
 {
-    room_restart()
+    room_restart();
     //instance_destroy()
 }
 
@@ -156,7 +159,9 @@ if(hp &lt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hit=1
+            <string>/// Triggers Player hit flash 
+
+hit = 1;
 </string>
           </argument>
         </arguments>
@@ -179,7 +184,9 @@ if(hp &lt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hit = 1
+            <string>/// Enemy Collision 
+
+hit = 1;
 </string>
           </argument>
         </arguments>
@@ -202,9 +209,10 @@ if(hp &lt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw States
+            <string>/// Draw Player States
+
 draw_set_colour(c_yellow);
-draw_text(5,20,"State:" + string(current_state)); 
+draw_text(5,20,"State: " + string(current_state)); 
 </string>
           </argument>
         </arguments>
@@ -227,11 +235,16 @@ draw_text(5,20,"State:" + string(current_state));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>/// Draw player sprite/health bar/hit flash
 
+draw_self();
+
+//Health Bar
 draw_sprite(spr_healthbarback,-1,x,y-32);
-draw_sprite_stretched(spr_healthbar,-1,x+1,y-31,hp/maxhp*48,8)
+draw_sprite_stretched(spr_healthbar,-1,x-24,y-36,hp/maxhp*48,8);
+// Health bars can stay for the time being; till we get our UI system working
 
+//Player hit
 if(hit &gt; 0)
 {
     shader_set(sh_white);

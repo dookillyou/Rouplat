@@ -32,8 +32,8 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Enemy States">
-      <script>scripts\scr_enemy_ground.gml</script>
-      <script>scripts\scr_enemy_air.gml</script>
+      <script>scripts\scr_enemy_gunner_ground.gml</script>
+      <script>scripts\scr_enemy_gunner_air.gml</script>
     </scripts>
     <scripts name="Player States">
       <script>scripts\scr_player_ground.gml</script>
@@ -74,7 +74,7 @@
       <object>objects\obj_control</object>
     </objects>
     <objects name="Enemy Objects">
-      <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_gunner</object>
       <object>objects\obj_parent_enemy</object>
       <object>objects\obj_enemy_bullet</object>
       <object>objects\obj_enemy_gun</object>

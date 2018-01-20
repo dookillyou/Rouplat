@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Created by SlasherX
-//Being used by Ren
+            <string>/// Initialize the Timer
+//Created by SlasherX
+//Being used by Conner/Reily 
 
 seconds = 0;
 minutes = 0;
@@ -56,10 +57,12 @@ text = ""
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//If it's allowed to start.
+            <string>/// Make the Timer function
+
+//If it's allowed to start.
 if (count_up == true)
 {
-    seconds += 1/room_speed; //increment seconds by 1 ever real-time second.
+    seconds += 1/room_speed; //increment seconds by 1 every real-time second.
 }
 
 //If seconds hits around 60.
@@ -96,7 +99,9 @@ if (seconds == n)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>seconds = 0; 
+            <string>/// Set the timer to 0
+
+seconds = 0; 
 minutes = 0; 
 
 //global.seconds = seconds; 
@@ -123,7 +128,7 @@ minutes = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Setting up the display
+            <string>/// Setting up the display
 draw_set_font(fnt_main);
 draw_set_color(c_white);
 

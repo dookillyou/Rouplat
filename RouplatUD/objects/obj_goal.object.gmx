@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//randomgen
+/*
 while (!place_empty(x, y))
 {
    x = random(room_width);
@@ -35,26 +36,10 @@ while (!place_empty(x, y))
    y = obj_wall.y+1;
    }
 }
-
+*/
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_player">
-      <action>
-        <libid>1</libid>
-        <id>331</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_restart_game</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>
