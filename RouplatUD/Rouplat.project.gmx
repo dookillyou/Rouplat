@@ -22,6 +22,8 @@
     </sprites>
     <sprites name="Gun Related Sprites">
       <sprite>sprites\spr_gun</sprite>
+      <sprite>sprites\spr_gun_test_one</sprite>
+      <sprite>sprites\spr_gun_test_two</sprite>
       <sprite>sprites\spr_bullet</sprite>
     </sprites>
     <sprites name="Enemy Sprites">
@@ -66,6 +68,8 @@
     <objects name="Gun/Bullets Objects">
       <object>objects\obj_bullet</object>
       <object>objects\obj_gun</object>
+      <object>objects\obj_test_gun</object>
+      <object>objects\obj_gun_parent</object>
     </objects>
     <objects name="Background Objects">
       <object>objects\obj_timer</object>

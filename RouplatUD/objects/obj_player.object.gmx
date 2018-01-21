@@ -55,6 +55,11 @@ hit = 0;
 maxhp = 100;
 hp = maxhp;
 
+//Gun
+holding_gun = false;
+current_gun = 0; 
+
+
 
 
 
@@ -106,7 +111,7 @@ scr_on_ground();
             <kind>1</kind>
             <string>// Setup Player FSM
 //Debugging Zone VVV
-show_debug_message(mouse_x);
+//show_debug_message(current_gun);
 //Debugging Zone ^^^ 
 
 //States
