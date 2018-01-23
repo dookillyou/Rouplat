@@ -20,63 +20,6 @@ void main()
 }
 
 //######################_==_YOYO_SHADER_MARKER_==_######################@~
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //
 // Simple passthrough fragment shader
 //
@@ -86,5 +29,5 @@ varying vec4 v_vColour;
 void main()
 {
     gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
+    gl_FragColor = vec4(0,0,0,gl_FragColor.a);
 }
-
