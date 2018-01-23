@@ -80,7 +80,7 @@ if (equipped == true)
           <argument>
             <kind>1</kind>
             <string>/// Make the Gun Function 
-show_debug_message(equipped);
+
 event_inherited();
 if (equipped == true)
 {

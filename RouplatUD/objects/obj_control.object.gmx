@@ -30,6 +30,9 @@ scr_enum_init();
 instance_create(x,y,obj_timer);
 instance_create(x,y,obj_score);
 
+show_debug_message("This is the width: " + string(display_get_width()))
+show_debug_message("This is the height: " + string(display_get_height()))
+
 </string>
           </argument>
         </arguments>
