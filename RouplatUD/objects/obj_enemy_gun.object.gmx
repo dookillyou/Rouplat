@@ -33,34 +33,6 @@ shot_timer = 0
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Stick to the closest enemy
-//Will be changed once I get the enemy gun system working
-
-instance_nearest(x,y,obj_enemy_gunner);
-//x = obj_enemy.x;
-//y = obj_enemy.y;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -79,8 +51,6 @@ instance_nearest(x,y,obj_enemy_gunner);
           <argument>
             <kind>1</kind>
             <string>/// Make the gun Function 
-
-image_angle = point_direction(x,y,obj_player.x,obj_player.y)
 
 //Shooting timer
 if (shot_timer != 10)
