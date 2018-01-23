@@ -54,6 +54,7 @@
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_white.shader</shader>
+    <shader type="GLSLES">shaders\sh_black.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\fnt_main</font>
@@ -64,6 +65,7 @@
       <object>objects\obj_wall_parent</object>
       <object>objects\obj_small_wall</object>
       <object>objects\obj_door</object>
+      <object>objects\obj_fake_wall</object>
     </objects>
     <objects name="Gun/Bullets Objects">
       <object>objects\obj_bullet</object>

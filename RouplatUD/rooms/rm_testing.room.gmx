@@ -155,6 +155,13 @@
     <instance objName="obj_small_wall" x="128" y="160" name="inst_96298FE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_small_wall" x="96" y="160" name="inst_EF90A0E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_test_gun" x="416" y="360" name="inst_9FA1ACF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fake_wall" x="352" y="384" name="inst_9E875ED7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fake_wall" x="352" y="352" name="inst_8888D60C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fake_wall" x="352" y="320" name="inst_9298D10B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fake_wall" x="352" y="288" name="inst_67BCB7C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fake_wall" x="352" y="256" name="inst_A9739302" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fake_wall" x="352" y="224" name="inst_B7C8D2B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fake_wall" x="352" y="192" name="inst_C0F8D347" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
