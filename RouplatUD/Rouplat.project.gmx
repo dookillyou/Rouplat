@@ -30,7 +30,9 @@
       <sprite>sprites\spr_enemy</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_tile_set</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Enemy States">
@@ -91,6 +93,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_tiles</room>
     <room>rooms\rm_testing</room>
   </rooms>
   <help>
