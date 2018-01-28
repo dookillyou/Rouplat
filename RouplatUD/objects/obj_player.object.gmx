@@ -32,6 +32,7 @@ x_speed = 0;
 y_speed = 0;
 on_ground = false;
 p_facing = 0; // -1 = left, 1 = right
+image_speed = 0.3;
 
 // Player states
 current_state = scr_player_ground; 

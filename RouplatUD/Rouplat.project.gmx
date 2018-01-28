@@ -29,6 +29,7 @@
     <sprites name="Enemy Sprites">
       <sprite>sprites\spr_enemy</sprite>
     </sprites>
+    <sprite>sprites\spr_player_walking</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tile_set</background>
